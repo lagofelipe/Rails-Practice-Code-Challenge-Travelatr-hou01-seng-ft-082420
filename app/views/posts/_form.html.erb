@@ -1,0 +1,8 @@
+<%= form_with model: @post do |f| %>
+    Title: <%= f.text_field :title %><br><br>
+    Content: <%= f.text_area :content %><br><br>
+    Destination: <%= f.collection_select :destination_id, @destinations, :id, :name, {include_blank: 'Select Destination'} %><br><br>
+    Blogger: <%= f.collection_select :blogger_id, @bloggers, :id, :name, {include_blank: 'Select Blogger'} %><br><br>
+
+    <%= f.submit %>
+<% end %>

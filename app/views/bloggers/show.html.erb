@@ -1,0 +1,12 @@
+
+<h1><%= @blogger.name %></h1>
+
+<% @blogger.posts.each do |post| %>
+    <h2><%= post.title + " - " + post.likes.to_s %></h2>
+<% end %>
+
+<% @blogger.destinations.each do |destination| %>
+<% end %>
+
+<%= @featured_post %>
+
